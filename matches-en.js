@@ -98,7 +98,7 @@ async function loadMatches() {
     const label = stingWebElement.getAttribute('label');
     const view = stingWebElement.getAttribute('view');
     const matchLinks = getMatchLinks();
-    const url = `https://api.sting-web.com/npm/v2/get-all-matches-api-apps/${label}`;
+    const url = `https://api.sting-web.com/apps/3in1/npm/en.json${label}`;
     const data = await fetchMatches(url);
     const matches = data[label] || [];
     matches.forEach((match, index) => {
